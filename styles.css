@@ -1,0 +1,86 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+#calc{
+    height: 250px;
+    width: 450px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+#display{
+    grid-column: 1 / -1;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 5px;
+    font-size: 5.5em;
+    text-shadow: 1.3px 1.3px #383838;
+    margin: 5px;
+}
+.container{
+    background: #001d3d;
+    border: 10px solid #000814;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    gap: 2px;
+    justify-content: center;
+    padding: 10px;
+}
+
+button{
+    margin: 1px;
+    border-radius: 5%;
+    border: none;
+    font-weight: initial;
+    font-size: 2em;
+    font-family: monospace;
+    color: black;
+}
+
+button.operand,.decimal{
+    background: #003566;
+    color: aliceblue;
+}
+
+button.operator, .equals{
+    background: #ffc300;
+}
+
+button.sign,.clear,.percent{
+    background:#ffd60a ;
+}
+
+#zero{
+    grid-column: span 2;
+    background: #003566;
+    color: aliceblue;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.button-flash{
+    animation: flash 0.2s ease-in-out;
+}
+
+@keyframes flash{
+    0%{
+        background-color: #ffe066;
+        transform: scale(1.05);
+    }
+
+    100%{
+        background-color: initial;
+        transform: scale(1);
+    }
+}
